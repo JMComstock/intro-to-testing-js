@@ -18,7 +18,15 @@ describe('sayHello Unit Tests', function () {
     it('should be a defined function', function() {
         expect(sayHello).toBeDefined();
     });
+    it('should return a string', function () {
+        expect(typeof sayHello()).toBe("string");
+    });
+    it('should return "Hello!" when no arguments are passed', function () {
+        expect(sayHello()).toBe("Hello!");
+    });
 });
+
+
 /*describe('sayHello Unit Tests' ,function() {
     it('should be a defined function', function () {
         expect(sayHello).toBeDefined();
