@@ -21,8 +21,17 @@ describe('sayHello Unit Tests', function () {
     it('should return a string', function () {
         expect(typeof sayHello()).toBe("string");
     });
-    it('should return "Hello!" when no arguments are passed', function () {
-        expect(sayHello()).toBe("Hello!");
+    it('should return "Hello, Jane!" when called with the argument "Jane".', function () {
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
+    });
+    it('should return "Hello, Alex!" when called with the argument "Alex".', function () {
+        expect(sayHello("Alex")).toBe(("Hello, Alex!"));
+    });
+    it('should return "Hello, Pat!" when called with an argument "Pat",', function () {
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
+    });
+    it('should return "Hello, " + input + "!".', function () {
+        expect(sayHello("Jason")).toBe("Hello, Jason!");
     });
 });
 
